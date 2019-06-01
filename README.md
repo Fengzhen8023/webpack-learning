@@ -12,7 +12,7 @@
 
 > webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。
 
-![](E:\Code\webpack-learning\blog-img\1559356365410.png)
+![](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog-img/1559356365410.png)
 
 说的直白一点，就是讲我们的代码进行编译打包，变成能够被浏览器识别的前端脚本。就拿一个Vue项目为例：
 
