@@ -1,4 +1,5 @@
 let path = require("path");
+let HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
     devServer: {
@@ -12,5 +13,16 @@ module.exports = {
     output: {       // 配置文件默认是dist目录下的main.js文件
         filename: "index.js",   // 出口文件的文件名
         path: path.resolve(__dirname, "build")   //出口文件的路径，注意一定要是绝对路径
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html',
+            minify: {
+                removeAttributeQuotes: true,
+                collapseWhitespace: true
+            },
+            hash: true
+        }),
+    ]
 }
