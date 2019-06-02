@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("let myName = __webpack_require__(/*! ./name.js */ \"./src/name.js\")\r\nconsole.log(myName);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("let myName = __webpack_require__(/*! ./name.js */ \"./src/name.js\")\r\nconsole.log(myName);\r\n\r\nconsole.log(\"test yarn build\");\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("let myName = __webpack_require__(/*! ./name.js */ \"./src/name.js\")\r\nco
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"Allen Feng hahah\"\n\n//# sourceURL=webpack:///./src/name.js?");
+eval("module.exports = \"Allen Feng\"\n\n//# sourceURL=webpack:///./src/name.js?");
 
 /***/ })
 
