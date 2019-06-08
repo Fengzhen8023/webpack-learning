@@ -1,0 +1,6 @@
+body {
+    background-color: gray;
+    transform: rotate(45deg)
+}
+
+@import './a.css';
