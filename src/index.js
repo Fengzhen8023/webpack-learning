@@ -1,12 +1,17 @@
-let myName = require("./name.js")
-console.log(myName);
+let name = require('./name.js')
 
-console.log("test yarn build");
+let showName = () => {
+    console.log(name);
+}
 
-console.log("test yarn dev");
+showName();
 
-console.log('我是 index.js 文件');
 
-require('./index.css')  // 引入 .css 样式文件
+// class A {
+//     className = 'A' 
+// }
 
-require('./b.less')     // 引入 .less 样式文件
+
+// let a = new A();
+
+console.log(a);

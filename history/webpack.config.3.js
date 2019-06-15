@@ -8,7 +8,7 @@ module.exports = {
     optimization: {
         minimizer: [
             new OptimizeCSSAssetsPlugin(),
-            new TerserJSPlugin
+            // new TerserJSPlugin
         ]
     },
     devServer: {
@@ -61,10 +61,10 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            '@babel/preset-env'     // 预设，将ES6转成ES5
+                            '@babel/preset-env'
                         ],
                         plugins: [
-                            '@babel/plugin-proposal-class-properties'   // 将ES7语法中的class转成ES5
+                            '@babel/plugin-proposal-class-properties'
                         ]
                     }
                 }
