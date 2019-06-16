@@ -64,13 +64,10 @@ module.exports = {
                             '@babel/preset-env'     // 预设，将ES6转成ES5
                         ],
                         plugins: [
-                            '@babel/plugin-proposal-class-properties',   // 将ES7语法中的class转成ES5
-                            '@babel/plugin-transform-runtime'   // 转换Generator、Promise等语法
+                            '@babel/plugin-proposal-class-properties'   // 将ES7语法中的class转成ES5
                         ]
                     }
-                },
-                include: path.resolve(__dirname, 'src'),
-                // exclude: /node_modules/
+                }
             }
         ]
     }

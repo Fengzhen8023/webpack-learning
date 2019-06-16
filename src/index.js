@@ -1,17 +1,10 @@
-let name = require('./name.js')
-
-let showName = () => {
-    console.log(name);
+// require('@babel/polyfill')
+function * generator() {
+    yield 1;
 }
 
-showName();
+console.log(generator().next(() => {
+    console.log('generator 执行完毕');
+}));
 
-
-// class A {
-//     className = 'A' 
-// }
-
-
-// let a = new A();
-
-console.log(a);
+console.log("Allen Feng".includes("Feng"));
