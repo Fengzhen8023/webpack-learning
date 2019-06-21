@@ -3,7 +3,6 @@ let HtmlWebpackPlugin = require("html-webpack-plugin")
 let MiniCssExtract = require('mini-css-extract-plugin')
 let OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 let TerserJSPlugin = require('terser-webpack-plugin');
-let Webpack = require('webpack')
 
 module.exports = {
     optimization: {
@@ -36,10 +35,7 @@ module.exports = {
         }),
         new MiniCssExtract({
             filename: 'main.css'
-        }),
-        // new Webpack.ProvidePlugin({
-        //     $: 'jquery'
-        // })
+        })
     ],
     module: {
         rules: [{
@@ -60,30 +56,16 @@ module.exports = {
                 ]
             },
             {
-                test: require.resolve('jquery'), // 匹配到引入jquery的文件
-                use: 'expose-loader?$' // 使用 expose-loader 进行处理
-            },
-            {
-                test: /\.js$/, // 匹配 .js 文件
-                use: {
-                    loader: 'eslint-loader', // 使用这个loader对匹配到的文件进行处理
-                    options: {
-                        enforce: 'pre' // 将eslint-loader设置成前置loader，首先用这个loader处理文件
-                    }
-                },
-                exclude: /node_modules/
-            },
-            {
                 test: /\.js$/,
                 use: {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            '@babel/preset-env' // 预设，将ES6转成ES5
+                            '@babel/preset-env'     // 预设，将ES6转成ES5
                         ],
                         plugins: [
-                            '@babel/plugin-proposal-class-properties', // 将ES7语法中的class转成ES5
-                            '@babel/plugin-transform-runtime' // 转换Generator、Promise等语法
+                            '@babel/plugin-proposal-class-properties',   // 将ES7语法中的class转成ES5
+                            '@babel/plugin-transform-runtime'   // 转换Generator、Promise等语法
                         ]
                     }
                 },

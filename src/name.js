@@ -1,1 +1,4 @@
-module.exports = "Allen Feng"
+// module.exports = "Allen Feng"
+
+console.log($);
+console.log(window.$);

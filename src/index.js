@@ -1,10 +1,7 @@
-// require('@babel/polyfill')
-function * generator() {
-    yield 1;
-}
+import $1 from 'jquery'
 
-console.log(generator().next(() => {
-    console.log('generator 执行完毕');
-}));
+// import $1 from 'expose-loader?$!jquery'
 
-console.log("Allen Feng".includes("Feng"));
+console.log($1)
+console.log(window.$);
+require('./name.js')
