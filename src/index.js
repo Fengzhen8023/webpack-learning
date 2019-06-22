@@ -1,7 +1,7 @@
-import $1 from 'jquery'
+// import logo from './logo.png'   // 引入图片
+// console.log(logo);  
 
-// import $1 from 'expose-loader?$!jquery'
+// let img = new Image();
+// img.src = logo;
 
-console.log($1)
-console.log(window.$);
-require('./name.js')
+// document.getElementsByTagName('body')[0].appendChild(img);

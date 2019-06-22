@@ -1,6 +1,7 @@
 body {
     background-color: gray;
-    transform: rotate(45deg)
+    /* transform: rotate(45deg) */
+    background: url('./logo.png')
 }
 
 @import './a.css';

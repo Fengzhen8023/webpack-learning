@@ -20,7 +20,9 @@
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
     "expose-loader": "^0.7.5",
+    "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "html-withimg-loader": "^0.1.16",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.7.0",
@@ -28,6 +30,7 @@
     "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.3.0",
+    "url-loader": "^2.0.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.5.1"

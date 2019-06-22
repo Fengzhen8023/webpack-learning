@@ -89,6 +89,25 @@ module.exports = {
                 },
                 include: path.resolve(__dirname, 'src'),
                 // exclude: /node_modules/
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: {
+                    loader: 'file-loader'
+                }
+            },
+            // {
+            //     test: /\.(png|jpg|jpeg|gif)$/,
+            //     use: {
+            //         loader: 'url-loader',
+            //         options: {
+            //             limit: 2000*1024
+            //         }
+            //     }
+            // },
+            {
+                test: /\.html$/,
+                use: 'html-withimg-loader'
             }
         ]
     }
