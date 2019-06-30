@@ -22,7 +22,8 @@ module.exports = {
     entry: "./src/index.js", // 打包的入口文件，默认是src目录下的index.js文件
     output: { // 配置文件默认是dist目录下的main.js文件
         filename: "index.js", // 出口文件的文件名
-        path: path.resolve(__dirname, "build") //出口文件的路径，注意一定要是绝对路径
+        path: path.resolve(__dirname, "build"), //出口文件的路径，注意一定要是绝对路径
+        publicPath: 'http://www.fengzhen8023.com/myProject/'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -35,7 +36,7 @@ module.exports = {
             hash: true
         }),
         new MiniCssExtract({
-            filename: 'main.css'
+            filename: 'css/main.css'
         }),
         // new Webpack.ProvidePlugin({
         //     $: 'jquery'
@@ -90,21 +91,22 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 // exclude: /node_modules/
             },
-            // {
-            //     test: /\.(png|jpg|jpeg|gif)$/,
-            //     use: {
-            //         loader: 'file-loader'
-            //     }
-            // },
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
                 use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 200 * 1024
-                    }
+                    loader: 'file-loader'
                 }
             },
+            // {
+            //     test: /\.(png|jpg|jpeg|gif)$/,
+            //     use: {
+            //         loader: 'url-loader',
+            //         options: {
+            //             limit: 2 * 1024, // 小于2k的图片，直接使用Base64编码进行处理
+            //             outputPath: '/image/'
+            //         }
+            //     }
+            // },
             {
                 test: /\.html$/,
                 use: 'html-withimg-loader'
