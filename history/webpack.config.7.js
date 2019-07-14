@@ -4,7 +4,6 @@ let MiniCssExtract = require('mini-css-extract-plugin')
 let OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 let TerserJSPlugin = require('terser-webpack-plugin');
 let Webpack = require('webpack')
-let HtmlWebpackPlugin = requier('html-webpack-plugin')
 
 module.exports = {
     optimization: {
@@ -20,13 +19,11 @@ module.exports = {
         compress: true // 是否对代码进行压缩
     },
     mode: "production", // 打包模式：有两种模式：development 和 production , 默认是 production 模式
-    entry: {    // 指定入口文件
-        'home': "./src/index.js",   
-        'other': "./src/other.js"
-    }, 
+    entry: "./src/index.js", // 打包的入口文件，默认是src目录下的index.js文件
     output: { // 配置文件默认是dist目录下的main.js文件
-        filename: "[name].js", // 出口文件的文件名
+        filename: "index.js", // 出口文件的文件名
         path: path.resolve(__dirname, "build"), //出口文件的路径，注意一定要是绝对路径
+        publicPath: 'http://www.fengzhen8023.com/myProject/'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -40,17 +37,6 @@ module.exports = {
         }),
         new MiniCssExtract({
             filename: 'css/main.css'
-        }), 
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: 'home.html',
-            chunks: ['home']
-        }),
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: 'other.html',
-            chunks: ['other']
-            // chunks: ['other', 'home']
         }),
         // new Webpack.ProvidePlugin({
         //     $: 'jquery'
