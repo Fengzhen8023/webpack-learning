@@ -22,6 +22,9 @@
 - **[12. 打包编译后文件的引入路径问题](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/12.%20%E6%89%93%E5%8C%85%E7%BC%96%E8%AF%91%E5%90%8E%E6%96%87%E4%BB%B6%E7%9A%84%E5%BC%95%E5%85%A5%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)**
 - **[13. 使用Webpack打包多页面应用](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/13.%20%E4%BD%BF%E7%94%A8Webpack%E6%89%93%E5%8C%85%E5%A4%9A%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8.md)**
 - **[14. Webpack的源码映射](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/14.%20Webpack%E7%9A%84%E6%BA%90%E7%A0%81%E6%98%A0%E5%B0%84.md)**
+- **[15. Webpack中的三个小插件](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/15.%20Webpack%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%8F%92%E4%BB%B6.md)**
+- **[16. Webpack的跨域请求问题](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/16.%20Webpack%E7%9A%84%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E9%97%AE%E9%A2%98.md)**
+
 
 
 ## 3. webpack基本简介
