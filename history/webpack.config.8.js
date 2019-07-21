@@ -16,22 +16,15 @@ module.exports = {
         port: 3000, // 指定开发服务器的端口号
         progress: true, // 显示开启本地服务器的进度
         contentBase: "./build", // 指定本地服务器默认打开的目录
-        compress: true, // 是否对代码进行压缩
-        before(app) {
-            app.get('/time', (req, res) => {
-                res.json({
-                    currentTime: '8:00',
-                    endTime: '10:00'
-                });
-            });
-        }
+        compress: true // 是否对代码进行压缩
     },
     mode: "production", // 打包模式：有两种模式：development 和 production , 默认是 production 模式
     devtool: "eval-source-map",
     entry: "./src/index.js", // 打包的入口文件，默认是src目录下的index.js文件
     output: { // 配置文件默认是dist目录下的main.js文件
-        filename: "Feng.js", // 出口文件的文件名
+        filename: "index.js", // 出口文件的文件名
         path: path.resolve(__dirname, "build"), //出口文件的路径，注意一定要是绝对路径
+        // publicPath: 'http://www.fengzhen8023.com/myProject/'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -46,7 +39,6 @@ module.exports = {
         new MiniCssExtract({
             filename: 'css/main.css'
         }),
-        new Webpack.BannerPlugin('Made by Allen Feng')
         // new Webpack.ProvidePlugin({
         //     $: 'jquery'
         // })
@@ -106,6 +98,16 @@ module.exports = {
                     loader: 'file-loader'
                 }
             },
+            // {
+            //     test: /\.(png|jpg|jpeg|gif)$/,
+            //     use: {
+            //         loader: 'url-loader',
+            //         options: {
+            //             limit: 2 * 1024, // 小于2k的图片，直接使用Base64编码进行处理
+            //             outputPath: '/image/'
+            //         }
+            //     }
+            // },
             {
                 test: /\.html$/,
                 use: 'html-withimg-loader'
