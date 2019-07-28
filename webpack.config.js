@@ -26,12 +26,20 @@ module.exports = {
             });
         }
     },
+    resolve: {
+        modules: [path.resolve("allen_modules"), path.resolve("node_modules")],
+        extensions: [".css", ".js", ".json"],
+        alias: {
+            bootstrap: 'bootstrap/dist/css/bootstrap.css'
+        },
+        // mainFields: ["style", "main"],   // 应用场景不多
+    },
     mode: "production", // 打包模式：有两种模式：development 和 production , 默认是 production 模式
     devtool: "eval-source-map",
     entry: "./src/index.js", // 打包的入口文件，默认是src目录下的index.js文件
     output: { // 配置文件默认是dist目录下的main.js文件
         filename: "Feng.js", // 出口文件的文件名
-        path: path.resolve(__dirname, "build"), //出口文件的路径，注意一定要是绝对路径
+        path: path.resolve(__dirname, "build"), //出口文件的路径，注意一定要是绝对路径,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -46,12 +54,18 @@ module.exports = {
         new MiniCssExtract({
             filename: 'css/main.css'
         }),
-        new Webpack.BannerPlugin('Made by Allen Feng')
-        // new Webpack.ProvidePlugin({
-        //     $: 'jquery'
-        // })
+        new Webpack.BannerPlugin('Made by Allen Feng'),
+        new Webpack.ProvidePlugin({
+            $: 'jquery'
+        }),
+        new Webpack.DefinePlugin({
+            DEV: JSON.stringify("dev"),
+            FlAG: 'true',
+            EXPRESSION: '1+1'
+        })
     ],
     module: {
+        noParse: /jQuery/,
         rules: [{
                 test: /\.css$/,
                 use: [
