@@ -24,7 +24,7 @@
 - **[14. Webpack的源码映射](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/14.%20Webpack%E7%9A%84%E6%BA%90%E7%A0%81%E6%98%A0%E5%B0%84.md)**
 - **[15. Webpack中的三个小插件](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/15.%20Webpack%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E5%B0%8F%E6%8F%92%E4%BB%B6.md)**
 - **[16. Webpack的跨域请求问题](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/16.%20Webpack%E7%9A%84%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E9%97%AE%E9%A2%98.md)**
-
+- **[17. Webpack的resolve属性](https://github.com/Fengzhen8023/webpack-learning/blob/master/blog/17.%20Webpack%E7%9A%84resolve%E5%B1%9E%E6%80%A7.md)**
 
 
 ## 3. webpack基本简介
